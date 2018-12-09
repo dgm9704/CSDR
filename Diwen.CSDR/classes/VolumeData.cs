@@ -5,12 +5,12 @@ namespace Diwen.CSDR
 
     [Serializable]
     [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:auth.072.001.01")]
-    public partial class IssuerCSDIdentification1
+    public partial class VolumeData
     {
-        public string LEI { get; set; }
+        [XmlElement("Vol")]
+        public decimal Volume { get; set; }
 
-        public string FrstTwoCharsISIN { get; set; }
-
-        public string Ctry { get; set; }
+        [XmlElement("Val")]
+        public decimal Value { get; set; }
     }
 }

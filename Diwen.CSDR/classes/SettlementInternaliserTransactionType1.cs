@@ -5,16 +5,21 @@ namespace Diwen.CSDR
 
     [Serializable]
     [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:auth.072.001.01")]
-    public partial class SettlementInternaliserTransactionType1
+    public partial class TransactionType
     {
-        public InternalisationData1 SctiesBuyOrSell { get; set; }
+        [XmlElement("SctiesBuyOrSell")]
+        public InternalisationData SecuritiesBuyOrSell { get; set; }
 
-        public InternalisationData1 CollMgmtOpr { get; set; }
+        [XmlElement("CollMgmtOpr")]
+        public InternalisationData CollateralManagementOperation { get; set; }
 
-        public InternalisationData1 SctiesLndgOrBrrwg { get; set; }
+        [XmlElement("SctiesLndgOrBrrwg")]
+        public InternalisationData SecurititesLendingOrBorrowing { get; set; }
 
-        public InternalisationData1 RpAgrmt { get; set; }
+        [XmlElement("RpAgrmt")]
+        public InternalisationData RepurchaseAgreement { get; set; }
 
-        public InternalisationData1 OthrTxs { get; set; }
+        [XmlElement("OthrTxs")]
+        public InternalisationData OtherTransactions { get; set; }
     }
 }

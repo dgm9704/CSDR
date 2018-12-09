@@ -5,10 +5,12 @@ namespace Diwen.CSDR
 
     [Serializable]
     [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:auth.072.001.01")]
-    public partial class SettlementInternaliserClientType1
+    public partial class ClientType
     {
-        public InternalisationData1 Prfssnl { get; set; }
-    
-        public InternalisationData1 Rtl { get; set; }
+        [XmlElement("Prfssnl")]
+        public InternalisationData Professional { get; set; }
+
+        [XmlElement("Rtl")]
+        public InternalisationData Retail { get; set; }
     }
 }

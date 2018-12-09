@@ -8,6 +8,7 @@ namespace Diwen.CSDR
     [XmlRoot(Namespace = "urn:iso:std:iso:20022:tech:xsd:auth.072.001.01", IsNullable = false)]
     public partial class Document
     {
-        public SettlementInternaliserReportV01 SttlmIntlrRpt { get; set; }
+        [XmlElement("SttlmIntlrRpt")]
+        public SettlementInternaliserReportV01 SettlementInternaliserReport { get; set; }
     }
 }

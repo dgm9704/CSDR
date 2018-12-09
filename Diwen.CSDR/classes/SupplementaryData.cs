@@ -6,10 +6,12 @@ namespace Diwen.CSDR
 
     [Serializable]
     [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:auth.072.001.01")]
-    public partial class SupplementaryData1
+    public partial class SupplementaryData
     {
-        public string PlcAndNm { get; set; }
+        [XmlElement("PlcAndNm")]
+        public string PlaceAndName { get; set; }
 
-        public XmlElement Envlp { get; set; }
+        [XmlElement("Envlp")]
+        public XmlElement Envelope { get; set; }
     }
 }

@@ -5,10 +5,15 @@ namespace Diwen.CSDR
 
     [Serializable]
     [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:auth.072.001.01")]
-    public partial class InternalisationDataVolume1
+    public enum OperationType
     {
-        public decimal Vol { get; set; }
+        [XmlEnum("NEWT")]
+        NewTransaction,
 
-        public decimal Val { get; set; }
+        [XmlEnum("AMND")]
+        Amendment,
+
+        [XmlEnum("CANC")]
+        CAncellation,
     }
 }
